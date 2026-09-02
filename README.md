@@ -1,8 +1,8 @@
-# CTlogs MCP server
+# CTlogs.io MCP server
 
 Certificate Transparency, inside the conversation you are already having.
 
-CTlogs runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which subdomains a domain has, who issued the certificate on a host, whether anyone is using your brand name in a hostname. You ask; it looks it up; you work with what comes back.
+[CTlogs.io](https://ctlogs.io) runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which subdomains a domain has, who issued the certificate on a host, whether anyone is using your brand name in a hostname. You ask; it looks it up; you work with what comes back.
 
 ```
 https://mcp.ctlogs.io/mcp
@@ -79,7 +79,7 @@ The tools describe their own parameters to the client, so your assistant already
 
 ## Who makes this
 
-CTlogs is built on the technology behind [ABTdomain.com](https://abtdomain.com), the domain intelligence platform, and shares its data and tooling with [Domainkits.com](https://domainkits.com), which covers domain search and newly registered domains. Certificate Transparency is one lens on the same picture: names appear in the domain registries, in DNS, and in the certificate logs, and the three sites look at the same names from those three sides.
+CTlogs.io is built on the technology behind [ABTdomain.com](https://abtdomain.com), the domain intelligence platform, and shares its data and tooling with [Domainkits.com](https://domainkits.com), which covers domain search and newly registered domains. Certificate Transparency is one lens on the same picture: names appear in the domain registries, in DNS, and in the certificate logs, and the three sites look at the same names from those three sides.
 
 Open source tools and datasets from the same team are on [github.com/ABTdomain](https://github.com/ABTdomain).
 
@@ -87,4 +87,4 @@ Open source tools and datasets from the same team are on [github.com/ABTdomain](
 
 Questions and problems: [info@lyalpha-gmbh.com](mailto:info@lyalpha-gmbh.com), or open a ticket from the member area.
 
-CTlogs is operated by Lyalpha GmbH, Düsseldorf, Germany. [Terms](https://ctlogs.io/terms) · [Privacy](https://ctlogs.io/privacy) · [Imprint](https://ctlogs.io/imprint)
+CTlogs.io is operated by Lyalpha GmbH, Düsseldorf, Germany. [Terms](https://ctlogs.io/terms) · [Privacy](https://ctlogs.io/privacy) · [Imprint](https://ctlogs.io/imprint)
