@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ctlogs",
+  "version": "1.0.0",
+  "description": "Certificate Transparency search: subdomains, certificate history and hostname keyword search.",
+  "author": {
+    "name": "Lyalpha GmbH",
+    "url": "https://ctlogs.io"
+  },
+  "homepage": "https://ctlogs.io/mcp",
+  "repository": "https://github.com/ABTdomain/ctlogs-mcp",
+  "keywords": [
+    "certificate-transparency",
+    "ssl",
+    "tls",
+    "certificates",
+    "subdomains",
+    "dns",
+    "osint",
+    "brand-protection",
+    "security"
+  ]
+}
