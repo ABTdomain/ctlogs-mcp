@@ -2,7 +2,7 @@
 
 Certificate Transparency, inside the conversation you are already having.
 
-[CTlogs.io](https://ctlogs.io) runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which subdomains a domain has, who issued the certificate on a host, whether anyone is using your brand name in a hostname. You ask; it looks it up; you work with what comes back.
+[CTlogs.io](https://ctlogs.io) runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which subdomains a domain has, which certificates have been issued for a hostname and by which certificate authority, whether your brand name appears in any hostname. You ask; it looks it up; you work with what comes back.
 
 ```
 https://mcp.ctlogs.io/mcp
@@ -65,9 +65,9 @@ The tools describe their own parameters to the client, so your assistant already
 ## Things to ask
 
 - "What subdomains exist under example.com, and which were seen most recently?"
-- "Who issued the certificate on api.example.com, and when does it expire?"
+- "Which certificates have been issued for api.example.com, from which certificate authority, and when does the latest one expire?"
 - "Show me the certificates logged for example.com recently, including subdomains."
-- "Is anyone using our brand name in a hostname?"
+- "Does our brand name appear in any hostname?"
 - "Look up the certificate with this fingerprint."
 - "How much of my allowance is left?"
 
@@ -75,7 +75,8 @@ The tools describe their own parameters to the client, so your assistant already
 
 - **One account, every client.** A laptop, an editor and a server can all be connected at once. They act as the same account, and usage is counted once.
 - **Made for asking, not exporting.** Results are sized for a conversation. For bulk work, use the [API](https://ctlogs.io/docs) directly.
-- **What the data means.** The index is built from public Certificate Transparency logs. It tells you which names have had certificates issued, by whom and when; it does not tell you whether a host is live or who operates it. Read [what Certificate Transparency actually tells you](https://ctlogs.io/blog/what-certificate-transparency-actually-tells-you) before drawing conclusions.
+- **Public data, for security work.** Everything in the index comes from public Certificate Transparency logs: hostnames and certificate metadata such as the issuing certificate authority, dates and fingerprints. The service does not support looking up personal information; queries take a domain name, a hostname, a fingerprint or a word inside a hostname. It is built for security, brand protection and infrastructure work.
+- **What the data means.** The index is built from public Certificate Transparency logs. It tells you which names have had certificates issued, from which certificate authority and when; it does not tell you whether a host is live or what it serves. Read [what Certificate Transparency actually tells you](https://ctlogs.io/blog/what-certificate-transparency-actually-tells-you) before drawing conclusions.
 
 ## Who makes this
 
