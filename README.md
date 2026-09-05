@@ -2,7 +2,7 @@
 
 Certificate Transparency, inside the conversation you are already having.
 
-[CTlogs.io](https://ctlogs.io) runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which subdomains a domain has, which certificates have been issued for a hostname and by which certificate authority, whether your brand name appears in any hostname. You ask; it looks it up; you work with what comes back.
+[CTlogs.io](https://ctlogs.io) runs a hosted [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it to Claude, Cursor, or any client that speaks MCP, and your assistant can query the certificate index itself: which certificates have been issued for a hostname, by which certificate authority, and when they expire; or which certificate sits behind a fingerprint. You ask; it looks it up; you work with what comes back.
 
 ```
 https://mcp.ctlogs.io/mcp
@@ -52,11 +52,11 @@ Any client that supports MCP over Streamable HTTP with OAuth sign-in works the s
 
 | Tool | The question it answers |
 |---|---|
-| `find_subdomains` | Which subdomains of a domain exist in the record, and when each was last seen |
 | `lookup_certificates` | The certificate history of one hostname, or the certificate behind a fingerprint |
-| `search_hostnames` | Which hostnames contain a word, for impersonation and typosquat hunting |
 | `index_status` | How large and how fresh the index is |
 | `account_quota` | How much of your allowance is left |
+
+Listing the subdomains of a domain and searching hostnames for a keyword are [DomainKits](https://domainkits.com/tools/subdomains) tools, from the same team; this server answers one question, which certificates exist for a name.
 
 Every tool is read-only. Nothing the assistant can call changes anything.
 
@@ -64,11 +64,9 @@ The tools describe their own parameters to the client, so your assistant already
 
 ## Things to ask
 
-- "What subdomains exist under example.com, and which were seen most recently?"
 - "Which certificates have been issued for api.example.com, from which certificate authority, and when does the latest one expire?"
-- "Show me the certificates logged for example.com recently, including subdomains."
-- "Does our brand name appear in any hostname?"
-- "Look up the certificate with this fingerprint."
+- "Has anyone other than our usual certificate authority issued for www.example.com?"
+- "Look up the certificate with this fingerprint, and tell me which names it covers."
 - "How much of my allowance is left?"
 
 ## Good to know

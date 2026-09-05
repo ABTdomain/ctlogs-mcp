@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ctlogs",
   "version": "1.0.0",
-  "description": "Certificate Transparency search: subdomains, certificate history and hostname keyword search.",
+  "description": "Certificate Transparency search: the certificate history of a hostname, or the certificate behind a fingerprint.",
   "author": {
     "name": "Lyalpha GmbH",
     "url": "https://ctlogs.io"
@@ -14,10 +14,8 @@
     "ssl",
     "tls",
     "certificates",
-    "subdomains",
-    "dns",
+    "certificate-authority",
     "osint",
-    "brand-protection",
     "security"
   ]
 }
